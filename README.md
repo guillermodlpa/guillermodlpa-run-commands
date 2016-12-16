@@ -18,6 +18,9 @@ alias l="git log --stat"
 alias lp="git log -p"
 alias o="git checkout"
 alias brm="git branch -D"
+alias amend="git commit -a --amend"
+alias wip="git add -u && git commit -m 'WIP'"
+alias undo="git reset HEAD~1 --mixed"
 
 # Branch grooming
 # removes all branches that are already merged in master
