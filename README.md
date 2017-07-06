@@ -6,7 +6,6 @@ Add lines below to `~/.bashrc` or `~/.zshrc` if using [Oh My Zsh](https://github
 echo "Welcome!"
 
 # Git aliases
-
 alias s="git status"
 alias f="git diff"
 alias a="git add"
@@ -24,18 +23,7 @@ alias undo="git reset HEAD~1 --mixed"
 
 # Branch grooming
 # removes all branches that are already merged in master
-
 alias groom="git checkout master;git pull origin master;echo 'Deleting:';git branch --merged;git branch --merged | xargs git branch -d;echo '';echo 'Branches left:';git branch --no-merged"
-
-# Making docker default machine work, if developing with Docker
-# eval "$(docker-machine env default)"
-
-# Extending file system resources to unlock Grunt webfont task when a lot of files are handled.
-# ulimit -n 4096
-
-# Go exports, if working on a Go app
-# export GOPATH=~/[path to current go project workspace directory]
-# export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
 
 echo "Have a wonderful day :)"
 ```
