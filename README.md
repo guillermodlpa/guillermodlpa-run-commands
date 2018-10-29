@@ -5,7 +5,7 @@ Add lines below to `~/.bashrc` or `~/.zshrc` if using [Oh My Zsh](https://github
 ```
 echo "Welcome!"
 
-# Git aliases
+# Basic aliases
 alias s="git status"
 alias f="git diff"
 alias a="git add"
@@ -24,6 +24,9 @@ alias undo="git reset HEAD~1 --mixed"
 # Branch grooming
 # removes all branches that are already merged in master
 alias groom="git checkout master;git pull origin master;echo 'Deleting:';git branch --merged;git branch --merged | xargs git branch -d;echo '';echo 'Branches left:';git branch --no-merged"
+
+# Show recent branches
+alias recent='git for-each-ref --sort=committerdate refs/heads/ --format='\''%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'\'''
 
 echo "Have a wonderful day :)"
 ```
