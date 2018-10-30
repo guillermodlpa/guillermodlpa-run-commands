@@ -1,0 +1,22 @@
+[alias]
+  a = !git add
+  amend = !git commit -a --amend
+  bname = "!f(){ echo \"$(git rev-parse --abbrev-ref HEAD)\" | pbcopy; }; f"
+  bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
+  bd = !git branch -D
+  co = !git checkout
+  d = "!f() { git diff --no-color "${1}" | subl; }; f"
+  find = "!f(){ git branch -r | grep "${1}"; }; f"
+  grp = !git remote prune origin
+  l = !git log --stat
+  ll = !git log --pretty=format:\"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate --numstat
+  lp = !git log -p
+  ls = !git log --pretty=format:\"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate
+  p = !git checkout -
+  pb = "!git push origin \"$(git rev-parse --abbrev-ref HEAD)\""
+  pf = !git push --force-with-lease
+  recent = !git for-each-ref --sort=committerdate refs/heads/ --format=\"'%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'\"
+  s = !git status
+  undo = !git reset HEAD~1 --mixed
+  up = !git pull --rebase --prune $@
+  wip = !git add -u && git commit -m "[WIP]"
