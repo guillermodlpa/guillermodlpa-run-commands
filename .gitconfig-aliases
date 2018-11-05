@@ -1,15 +1,16 @@
 [alias]
   a = !git add
   amend = !git commit -a --amend
-  bname = "!f(){ echo \"$(git rev-parse --abbrev-ref HEAD)\" | pbcopy; }; f"
   bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
   bd = !git branch -D
+  bname = "!f(){ echo \"$(git rev-parse --abbrev-ref HEAD)\" | pbcopy; }; f"
   co = !git checkout
   d = "!f() { git diff --no-color "${1}" | subl; }; f"
   find = "!f(){ git branch -r | grep "${1}"; }; f"
   grp = !git remote prune origin
   l = !git log --stat
   ll = !git log --pretty=format:\"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate --numstat
+  logfile = "!f(){ git log --follow -p -- $1; }; f"
   lp = !git log -p
   ls = !git log --pretty=format:\"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate
   p = !git checkout -

@@ -67,6 +67,11 @@ $ git l
 $ git ll
 ```
 
+##### Log history for a specific file
+```sh
+$ git logfile ./somefile.js
+```
+
 ##### Log with diff of files changed
 ```sh
 $ git lp
