@@ -2,7 +2,7 @@
 
 Add lines below to `~/.bashrc` or `~/.zshrc` if using [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 
-```
+```sh
 # Basic aliases
 alias s="git status"
 alias f="git diff"
