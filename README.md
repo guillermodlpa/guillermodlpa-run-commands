@@ -3,8 +3,6 @@
 Add lines below to `~/.bashrc` or `~/.zshrc` if using [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ```
-echo "Welcome!"
-
 # Basic aliases
 alias s="git status"
 alias f="git diff"
@@ -28,5 +26,8 @@ alias groom="git checkout master;git pull origin master;echo 'Deleting:';git bra
 # Show recent branches
 alias recent='git for-each-ref --sort=committerdate refs/heads/ --format='\''%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'\'''
 
-echo "Have a wonderful day :)"
+# Refresh the terminal
+alias src='source ~/.zshrc'
+
+echo "☀️"
 ```
