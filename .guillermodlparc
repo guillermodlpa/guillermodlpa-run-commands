@@ -60,7 +60,7 @@ expo() {
 }
 firebase() {
   lazynvm
-  expo $@
+  firebase $@
 }
 
 echo "☀️"
