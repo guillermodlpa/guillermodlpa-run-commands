@@ -27,7 +27,7 @@ alias src='source ~/.zshrc'
 
 # NVM loading. Lazy loaded because it takes a long time and makes terminal startup tedious otherwise
 lazynvm() {
-  unset -f nvm node npm npx yarn expo
+  unset -f nvm node npm npx yarn expo firebase
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
   if [ -f "$NVM_DIR/bash_completion" ]; then
